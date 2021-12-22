@@ -1,0 +1,23 @@
+ALGORITHM Exercice1
+
+VAR
+    SENTENCE: STRING
+    i: INTEGER
+    nb-words: INTEGER :=1
+    nb-vowels: INTEGER:=0
+BEGIN
+    REPEAT
+        Read(SENTENCE)
+    UNTIL (SENTENCE[lenght(SENTENCE)-1]=".")
+    Write (lenght(SENTENCE))
+    FOR i FROM 0 TO lenght(SENTENCE)-1 STEP 1  DO
+        IF (SENTENCE[i]=" ") THEN
+            nb-words= nb-words+1 
+        END_IF
+        IF (SENTENCE[i]="A" OR SENTENCE[i]="E" OR SENTENCE[i]="I" OR SENTENCE[i]="O" OR SENTENCE[i]="U" OR SENTENCE[i]="Y" ) THEN
+            nb-vowels := nb-vowels+1
+        END_IF
+    END_FOR   
+    Write(nb-words)
+    Write(nb-vowels)
+END
